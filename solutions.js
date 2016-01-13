@@ -160,18 +160,17 @@ function addBinary(a,b) {
 
 //******************************//
 
-// Usually when you buy something, you're asked whether your credit card number, phone number or answer to your most secret question is still correct. However, since someone could look over your shoulder, you don't want that shown on your screen. Instead, we mask it.
+// Trolls are attacking your comment section!
 
-// Your task is to write a function maskify, which changes all but the last four characters into '#'.
+// A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
 
-maskify("4556364607935616") == "############5616"
-maskify(     "64607935616") ==      "#######5616"
-maskify(               "1") ==                "1"
-maskify(                "") ==                 ""
+// Your task is to write a function that takes a string and return a new string with all vowels removed.
 
-// "What was the name of your first pet?"
-maskify("Skippy")                                   == "##ippy"
-maskify("Nananananananananananananananana Batman!") == "####################################man!"
+// For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+
+function disemvowel(str) {
+  return str.replace(/[aeiou]/gi, '');
+}
 
 
 
