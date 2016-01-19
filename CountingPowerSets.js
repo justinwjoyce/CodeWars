@@ -1,4 +1,4 @@
-
+// 7kyu
 // In this kata, you must create a function powers that takes an array, and returns the number of subsets possible to create from that list. In other words, counts the power sets.
 
 // For instance
@@ -20,3 +20,7 @@
 // For comparison, my Haskell solution can compute the number of sets for an array of length 90 000 in less than a second, so be quick!
 
 // You should treat each array passed as a set of unique values for this kata.
+
+function powers(list) {
+  return Math.pow(2, list.length);
+}
