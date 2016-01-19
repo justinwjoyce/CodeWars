@@ -12,12 +12,7 @@
 // You can see that they are case insensitive and disregards non alphanumeric characters. In addition to a few predefined tests, your function will also be tested against a random string generator 50 times which are guaranteed to produce valid palindromes.
 
 function palindrome(string) {
-    string = string.replace(/\W|_/g, '').toLowerCase();
-
-    for (i = 0; i < Math.floor(string.length/2); i++) {  
-        if (string[i] !== string[string.length -1 - i]) {
-            return false;
-        }
-    }
-    return true;
+  return string.toLowerCase().replace(/[^a-z]/g, '').split('').every(function (letter, pos, sanitized) {
+    return letter === sanitized[sanitized.length - pos - 1];
+  });
 }
