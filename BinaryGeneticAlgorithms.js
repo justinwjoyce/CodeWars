@@ -25,6 +25,8 @@
 
 // Good luck and have fun!
 
+// Using ES6
+
 var GeneticAlgorithm = function () {};
 
 GeneticAlgorithm.prototype.generate = function(length) {
