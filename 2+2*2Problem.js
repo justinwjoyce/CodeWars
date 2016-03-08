@@ -8,3 +8,6 @@
 function calculate(){
   return (2 + 2) * 2;
 }
+
+// ES6 Solution
+let calculate = () => (2 + 2) * 2;
