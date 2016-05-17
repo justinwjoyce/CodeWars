@@ -32,4 +32,3 @@ const createUnorderedList = (list) => {
   
   return React.createElement('ul', null, content);
 }
-
