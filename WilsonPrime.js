@@ -19,3 +19,7 @@ function factorial (number) {
     return f[number];
   return f[number] = factorial(number-1) * number;
 }
+
+// es6
+
+const amIWilson = p => [5, 13, 563].indexOf(p) > -1
