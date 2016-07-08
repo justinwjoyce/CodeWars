@@ -17,3 +17,5 @@
 var TempleStrings = function(obj, feature) {
   return `${obj} are ${feature}`;
 }
+
+let TempleStrings = (obj, feature) => `${obj} are ${feature}`;
