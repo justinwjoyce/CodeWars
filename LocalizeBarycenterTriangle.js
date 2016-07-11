@@ -22,3 +22,6 @@ function barTriang(a, b, c){
   ];
 }
 
+// es6
+
+const barTriang = ([xA, yA], [xB, yB], [xC, yC]) => [Math.round((xA + xB + xC) / .0003) / 10000, Math.round((yA + yB + yC) / .0003) / 10000];
