@@ -11,3 +11,7 @@
 // 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
 
 const summation = (num) => Array.apply(null, { length: num }).map((x, i) => i + 1).reduce((a, b) => a + b);
+
+// better solution
+
+const summation = n => n * (n + 1) / 2;
