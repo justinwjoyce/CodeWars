@@ -14,3 +14,7 @@ function mostLikely(prob1,prob2){
   
   return (+problem1[0] / +problem1[1]) > (+problem2[0] / +problem2[1])
 }
+
+// better es6 solution
+const divide = (a, b) => a / b;
+const mostLikely = (p1, p2) => divide(...p1.split(':')) > divide(...p2.split(':'));
