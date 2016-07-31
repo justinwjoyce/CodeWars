@@ -23,3 +23,25 @@ function getSocks(name, socks) {
     return [sock, socks.filter(s => sock != s)[0]];
   }
 }
+
+// best practices
+
+function getSocks(name, socks) {
+  
+  var a=[];
+  
+  var i=0;
+  while (i< socks.length-1 && a.length == 0){
+    for (var j=0; j<socks.length; j++){
+      if (i!=j 
+          && ((socks[i] == socks[j] && name == 'Henry')
+          ||  (socks[i] != socks[j] && name == 'Punky'))){
+          a.push(socks[i]);
+          a.push(socks[j]);
+          break;
+      }
+    }
+    i++;
+  }
+  return a;
+}
