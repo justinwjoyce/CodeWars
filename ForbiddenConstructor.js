@@ -25,3 +25,16 @@ var Point = (function() {
   
   return Point;
 })();
+
+// best practices
+
+function Point() {
+  throw "Can't call constructor";
+}
+
+Point.create = function(x, y) {
+  var p = Object.create(Point.prototype);
+  p.x = x;
+  p.y = y;
+  return p;
+}
