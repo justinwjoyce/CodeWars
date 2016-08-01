@@ -43,3 +43,13 @@ class Robot {
     return `Thank you for teaching me ${word}`;
   }
 }
+
+// best practices
+
+function Robot() {
+  let store = 'I do not understand the input already know word Thank you for teaching me'.toLowerCase().split(' ');
+  this.learnWord = word => {
+    if (!word || /[^a-z]/i.test(word)) return 'I do not understand the input';
+    return ~store.indexOf(word.toLowerCase()) ? `I already know the word ${word}` : (store.push(word.toLowerCase()), `Thank you for teaching me ${word}`);
+  }
+}
