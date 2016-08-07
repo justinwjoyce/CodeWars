@@ -13,3 +13,21 @@
 var calculate = (...a) => {
   try { return eval(a.join('')); } catch (x) { return null; }
 };
+
+// best practices
+
+var calculate = function calculate(a, o, b) {
+ var result = null;
+ 
+ if(o === "+") { 
+   result = a + b;
+ } else if(o === "-") {
+   result = a - b;
+ } else if(o === "/") { 
+   result = (b === 0 ? null : a/b);
+ } else if(o === "*") {
+   result = a * b;
+ }
+ 
+ return result; 
+}
