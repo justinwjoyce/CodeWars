@@ -13,4 +13,10 @@
 def solution(items, index, default_value)
   return default_value unless index < items.length && index >= -items.length
   return items[index]
-enda
+end
+
+# better solution
+
+def solution(items, index, default_value)
+  items.fetch(index, default_value)
+end
