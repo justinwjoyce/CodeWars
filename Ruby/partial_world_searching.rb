@@ -18,3 +18,10 @@ def findWord(query, array_of_strings)
   end
   return endarray
 end
+
+# better solution
+
+def findWord(query, array)
+   a = array.grep(/#{query}/i)
+   a.empty? ? ["Empty"] : a
+end
