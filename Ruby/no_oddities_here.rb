@@ -8,3 +8,9 @@ def no_odds(values)
   values.delete_if { |i| i % 2 != 0 }
   return values
 end
+
+# better solution
+
+def no_odds( values )
+  values.select &:even?
+end
